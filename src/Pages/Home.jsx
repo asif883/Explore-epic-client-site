@@ -1,4 +1,5 @@
 import Slider from "./Slider";
+import TouristsSpots from "./TouristsSpots";
 
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
            
             <Slider></Slider>
+            <TouristsSpots></TouristsSpots>
         </div>
     );
 };
