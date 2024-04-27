@@ -61,7 +61,7 @@ const MyList = () => {
                 <h1 className="text-4xl text-[#FF9933] font-bold">The Spots You Added</h1>
             </div>
             {
-                tourSpot?.map((spot,idx)=> <div className=" mb-8" key={idx}>
+                tourSpot?.map((spot,idx)=> <div className=" mb-7" key={idx}>
 
                         <div className="card card-side bg-base-100 shadow-xl">
                             <figure><img className="w-[320px] lg:w-[600px] h-full" src={spot.image} alt="Movie"/></figure>
