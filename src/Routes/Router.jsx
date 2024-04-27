@@ -10,6 +10,7 @@ import Add from "../Pages/Add";
 import Details from "../Pages/Details";
 import MyList from "../Pages/MyList";
 import PrivateRoute from "../Pages/PrivateRoute";
+import Update from "../Pages/Update";
 
 
 const Router = createBrowserRouter([
@@ -54,6 +55,12 @@ const Router = createBrowserRouter([
         {
           path:'/my-list',
           element:<PrivateRoute><MyList></MyList></PrivateRoute>
+        },
+        {
+          path:'/updateSpot/:id',
+          element:<Update></Update>,
+          loader:({params})=> fetch(`http://localhost:5000/addSpots/${params.id}`)
+
         }
       ]
     },

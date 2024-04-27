@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthProvider } from "../Provide/Provider";
 
 
 const AddTouristsSpots = () => {
+  const {user} =useContext(AuthProvider)
 
     const handleAdd = event=>{
         event.preventDefault();
@@ -16,8 +19,8 @@ const AddTouristsSpots = () => {
         const seasonality = form.seasonality.value;
         const travel_time = form.travel_time.value;
         const total_visitors_per_year = form.total_visitors_per_year.value;
-        const user_email = form.user_email.value;
-        const user_name = form.user_name.value;
+        const user_email = user.email;
+        const user_name = user.displayName;
         const short_description = form.short_description.value;
 
         const touristSpot ={spotName,country_name,image,location,average_cost,seasonality, travel_time,total_visitors_per_year,user_email,user_name,short_description}
@@ -105,12 +108,12 @@ const AddTouristsSpots = () => {
                 
                <div className="flex-1">
                  <label className="font-medium" >User Email:</label><br />
-                 <input className="input  w-full" type="email" id="user_email" name="user_email"  required />
+                 <input defaultValue={user.email} className="input  w-full" type="email" id="user_email" name="user_email"  required />
               </div>
               <div className="flex-1">
                  
                 <label className="font-medium">User Name:</label><br />
-                <input className="input  w-full" type="text" id="user_name" name="user_name"  required />
+                <input defaultValue={user.displayName} className="input  w-full" type="text" id="user_name" name="user_name"  required />
                 </div>
          </div>
         <div>
