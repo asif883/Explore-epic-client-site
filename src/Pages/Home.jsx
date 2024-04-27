@@ -1,3 +1,4 @@
+import Country from "./Country";
 import Slider from "./Slider";
 import TouristsSpots from "./TouristsSpots";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
            
             <Slider></Slider>
+            <Country></Country>
             <TouristsSpots></TouristsSpots>
         </div>
     );

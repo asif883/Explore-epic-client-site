@@ -44,15 +44,12 @@ const Nav = () => {
                 </div>
                 <div className="navbar-end">
                 {
-          user ?  <div className="dropdown dropdown-hover">
-          <div  tabIndex={0} role="button" className="btn btn-ghost m-1"><img className="w-16 h-16 rounded-full" src='https://i.ibb.co/YRM9Cdz/360-F-229758328-7x8jw-Cwjt-BMm-C6rg-Fz-LFh-Zo-Ep-Lob-B6-L8.jpg' alt={user.email} /></div>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <Link to='/profile'><li className="font-semibold">Profile</li></Link>
-            
+                    user ?  <img className="w-16 h-16 rounded-full" src={user.
+                        photoURL} alt={user.email} />
+                    
            
-          </ul>
-         </div>
-          :
+      
+                  :
            <div>
                 <Link to='/register'><button className="border-2 mr-4  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">Register</button></Link>  
            </div> 
