@@ -24,7 +24,7 @@ const Country = () => {
                              <div className="text-center absolute top-1/3 left-1/3">
 
                              <h1 className="text-3xl text-white font-semibold">{country.country_name}</h1>
-                             <Link to='/all-tourist-spots'><p className="px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">{country.place}</p>
+                             <Link to={`/all-tourist-spots`}><p className="px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">{country.place}</p>
                              </Link>
                             </div>       
                         </div>

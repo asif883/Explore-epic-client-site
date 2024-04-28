@@ -63,8 +63,9 @@ const MyList = () => {
             {
                 tourSpot?.map((spot,idx)=> <div className=" mb-7" key={idx}>
 
-                        <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img className="w-[320px] lg:w-[600px] h-full" src={spot.image} alt="Movie"/></figure>
+                        <div className="card lg:card-side bg-base-100 shadow-xl">
+                            <figure className="w-full">  
+                            <img className="w-full" src={spot.image} alt="Movie"/></figure>
                             <div className="card-body">
                                 <h2 className="card-title">{spot.spotName}</h2>
                                 <p className='flex items-center text-gray-500'><IoLocationSharp />{spot.location}, {spot.country_name}</p>

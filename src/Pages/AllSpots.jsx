@@ -1,9 +1,31 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const AllSpots = () => {
+    const loadedData = useLoaderData()
+    console.log(loadedData);
+  
     return (
         <div>
-            
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {
+                loadedData?.map((data,idx) => <div key={idx}>
+
+                 <div className="card  bg-base-100 shadow-xl">
+                        <figure className="px-10 pt-10">
+                            <img src={data.image} alt="Shoes" className="w-full h-[200px] rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">{data.tourists_spot_name}</h2>
+                            <p>{data.location} , {data.country_name}</p>
+                            <div className="card-actions">
+                            <button className="border-2 mt-4  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">View Details</button>
+                            </div>
+                        </div>
+                      </div>
+                </div>)
+            }
+          </div>
         </div>
     );
 };

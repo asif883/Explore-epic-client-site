@@ -6,10 +6,14 @@ import { AuthProvider } from "../Provide/Provider";
 
 
 const PrivateRoute = ({children}) => {
-    const {user} = useContext(AuthProvider);
+    const {user,loading} = useContext(AuthProvider);
 
     const location = useLocation();
-    console.log(location.pathname)
+    // console.log(location.pathname)
+
+    if(loading){
+        return <span className="loading loading-dots loading-lg mt-10"></span>
+    }
 
     if(user){
         return children;
