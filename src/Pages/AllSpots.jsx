@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const AllSpots = () => {
@@ -16,10 +16,11 @@ const AllSpots = () => {
                             <img src={data.image} alt="Shoes" className="w-full h-[200px] rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">{data.tourists_spot_name}</h2>
+                            <h2 className="card-title">{data.spotName}</h2>
                             <p>{data.location} , {data.country_name}</p>
                             <div className="card-actions">
-                            <button className="border-2 mt-4  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">View Details</button>
+                            <Link to={`details/${data._id}`}><button className="border-2 mt-4  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">View Details</button>
+                            </Link>
                             </div>
                         </div>
                       </div>

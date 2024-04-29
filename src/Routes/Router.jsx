@@ -67,12 +67,17 @@ const Router = createBrowserRouter([
         ,{
           path: '/all-tourist-spots',
           element:<AllSpots></AllSpots>,
-          loader : () => fetch('http://localhost:5000/addCountryDetails')
+          loader : () => fetch('http://localhost:5000/addSpots')
 
         },
         {
           path: '/countryForm',
           element:<CountryDetails></CountryDetails>
+        },
+        {
+          path: '/all-tourist-spots/details/:id',
+          element:<PrivateRoute><Details></Details></PrivateRoute>,
+          loader:({params})=> fetch(`http://localhost:5000/addSpots/${params.id}`)
         }
       ]
     },

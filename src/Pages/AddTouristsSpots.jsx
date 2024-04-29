@@ -53,10 +53,10 @@ const AddTouristsSpots = () => {
 
     }
     return (
-        <div className="max-w-4xl mx-auto mt-10 p-8 bg-orange-50 rounded-xl">
-      <h1 className="text-center text-4xl font-medium">Add Tourists Spot</h1>
+        <div className="max-w-4xl mx-auto mt-10 p-8  rounded-xl">
+      <h1 className="text-center text-4xl text-[#FF9933] font-bold">Add Tourists Spot</h1>
 
-      <form onSubmit={handleAdd} className="mt-5" >
+      <form onSubmit={handleAdd} className="mt-10" >
         <div className="flex gap-4 mb-4">
           <div className="flex-1">
           <label className="font-medium">Tourists Spot Name:</label><br />
