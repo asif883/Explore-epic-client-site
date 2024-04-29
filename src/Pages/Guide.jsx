@@ -1,6 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 const Guide = () => {
     return (
@@ -13,6 +14,7 @@ const Guide = () => {
                 </p>
             </div>
 
+            <Fade cascade>
             <div className="flex flex-col lg:flex-row justify-between mt-6">
                 {/*  */}
                 <div className="card w-96 shadow-xl">
@@ -60,6 +62,7 @@ const Guide = () => {
                     </div>
                </div>
             </div>
+            </Fade>
         </div>
     );
 };

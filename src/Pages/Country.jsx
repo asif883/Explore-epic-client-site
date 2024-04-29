@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 
@@ -16,11 +17,13 @@ const Country = () => {
                 <h1 className="text-4xl font-bold">Dream. Explore. Discover.</h1>
             </div>
 
+            
             <div className="mt-8 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                     countries?.map((country, idx) => <div key={idx}>
 
-                        <div  style={{backgroundImage: `url(${country.image})`,backgroundSize:'cover',}} className="w-[350px] lg:w-[400px]  h-[300px] lg:h-[350px] border rounded-lg relative">
+                       <Slide>
+                       <div  style={{backgroundImage: `url(${country.image})`,backgroundSize:'cover',}} className="w-[350px] lg:w-[400px]  h-[300px] lg:h-[350px] border rounded-lg relative">
                              <div className="text-center absolute top-1/3 left-1/3">
 
                              <h1 className="text-3xl text-white font-semibold">{country.country_name}</h1>
@@ -28,9 +31,11 @@ const Country = () => {
                              </Link>
                             </div>       
                         </div>
+                       </Slide>
                     </div>)
                 }
             </div>
+          
         </div>
     );
 };

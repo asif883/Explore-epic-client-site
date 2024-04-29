@@ -1,3 +1,4 @@
+import { Zoom } from "react-awesome-reveal";
 
 
 const TourIdeas = () => {
@@ -8,7 +9,8 @@ const TourIdeas = () => {
                 <h1 className="text-6xl font-bold">Adventure Ideas</h1>
             </div>
            
-           <div className="flex gap-4 flex-col lg:flex-row">
+          <Zoom>
+          <div className="flex gap-4 flex-col lg:flex-row">
                 {/*  */}
                 <div className="card ">
                 <figure className="px-10 pt-10">
@@ -69,6 +71,7 @@ const TourIdeas = () => {
                 </div>
             </div>
        </div>
+          </Zoom>
         </div>
     );
 };

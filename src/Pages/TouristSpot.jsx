@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Fade } from 'react-awesome-reveal';
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
@@ -6,6 +7,7 @@ const TouristSpot = ({data}) => {
     const {_id,spotName,image,location}=data
     return (
         <div>
+            <Fade>
             <div className="card border border-orange-200">
                 <figure><img className='h-[300px] w-full' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
@@ -17,6 +19,7 @@ const TouristSpot = ({data}) => {
                     </div>
                 </div>
            </div>
+            </Fade>
         </div>
     );
 };
