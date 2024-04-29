@@ -14,8 +14,20 @@ const googleProvider = new GoogleAuthProvider();
 const githubLoginProvider = new GithubAuthProvider()
 
 const Provider = ({children}) => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+      return setIsDarkMode(prevMode => !prevMode);
+    };
+
+
+
+
     const [user , setUser] = useState(null);
     const [loading , setLoading] =useState(true)
+
+
+
 
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth , currentUser =>{
@@ -63,7 +75,8 @@ const Provider = ({children}) => {
         singINGoogle,
         githubLogin,
         logOut,
-        loading
+        loading,
+        isDarkMode, toggleDarkMode
     }
     return (
         <AuthProvider.Provider value={authInfo}>

@@ -1,3 +1,17 @@
 .active{
     color: #FF9933;
 }
+
+/* App.css */
+.light-mode {
+    /* Define styles for light mode */
+    background-color: #fcf7ee;
+    color: #000000;
+  }
+  
+  .dark-mode {
+    /* Define styles for dark mode */
+    background-color: #222222;
+    color: #ffffff;
+  }
+  

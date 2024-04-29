@@ -69,6 +69,12 @@ const Router = createBrowserRouter([
           element:<AllSpots></AllSpots>,
           loader : () => fetch('http://localhost:5000/addSpots')
 
+        }
+        ,{
+          path: '/all-tourist-spots/:country',
+          element:<AllSpots></AllSpots>,
+          loader : ({params}) => fetch(`http://localhost:5000/CountryDetail/${params.country}`)
+
         },
         {
           path: '/countryForm',

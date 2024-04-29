@@ -61,15 +61,20 @@ const MyList = () => {
                 <h1 className="text-4xl text-[#FF9933] font-bold">The Spots You Added</h1>
             </div>
             {
-                tourSpot?.map((spot,idx)=> <div className=" mb-7" key={idx}>
+                tourSpot?.map((spot,idx)=> <div className="grid grid-cols-1 md:grid-cols-2 mb-7" key={idx}>
 
                         <div className="card lg:card-side bg-base-100 shadow-xl">
-                            <figure className="w-full">  
-                            <img className="w-full" src={spot.image} alt="Movie"/></figure>
-                            <div className="card-body">
+                            <figure className="flex-1">  
+                            <img className="w-[300px] h-[250px] rounded-xl"  src={spot.image} alt="Movie"/></figure>
+                            <div className="card-body flex-1">
                                 <h2 className="card-title">{spot.spotName}</h2>
                                 <p className='flex items-center text-gray-500'><IoLocationSharp />{spot.location}, {spot.country_name}</p>
-                                <p>{spot.short_description}</p>
+                                <div className="flex gap-3 ">
+                                    <p><span className="font-semibold">Estimated Cost:</span> 
+                                        {spot.average_cost}</p>
+                                    <p><span className="font-semibold">Total Visitor:</span> 
+                                        {spot.total_visitors_per_year}/year</p>
+                                </div>
                                 <div className="card-actions">
                                 <Link to={`/updateSpot/${spot._id}`}><button className="border-2 mr-4  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">Update</button>
                                 </Link>
