@@ -32,7 +32,7 @@ const Nav = () => {
                    <NavLink className='mr-4' to='/my-list'> <li>My List</li></NavLink>
                     </ul>
                     </div>
-                    <Link to='/'><p className="text-4xl font-bold">Ex<span className="text-[#FF9933]">plo</span>re-Ep<span className="text-[#FF9933]">ic</span></p></Link>
+                    <Link to='/'><p className="text-2xl lg:text-4xl font-bold">Ex<span className="text-[#FF9933]">plo</span>re-Ep<span className="text-[#FF9933]">ic</span></p></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-lg font-medium">
@@ -51,7 +51,7 @@ const Nav = () => {
                                id="clickable"
                              > 
                              
-                              <img className="w-16 h-16 rounded-full" src={user.
+                              <img className="w-12 lg:w-16 h-12 lg:h-16 rounded-full" src={user.
                             photoURL} alt={user.email} /></a>
                             <Tooltip  className="rounded-xl" anchorSelect="#clickable" clickable place="left">
                             <button>

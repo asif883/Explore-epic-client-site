@@ -15,7 +15,7 @@ const AllSpots = () => {
                 loadedData?.map((data,idx) => <div key={idx}>
 
 
-                  <div className="card lg:card-side bg-base-100 shadow-xl">
+                  <div className="card lg:card-side border shadow-xl">
                     <figure><img className="w-[300px] h-[250px] rounded-xl" src={data.image} alt="Album"/></figure>
                     <div className="card-body">
                       <h2 className="card-title">{data.spotName}</h2>

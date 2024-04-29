@@ -63,7 +63,7 @@ const MyList = () => {
             {
                 tourSpot?.map((spot,idx)=> <div className="grid grid-cols-1 md:grid-cols-2 mb-7" key={idx}>
 
-                        <div className="card lg:card-side bg-base-100 shadow-xl">
+                        <div className="card lg:card-side border shadow-xl">
                             <figure className="flex-1">  
                             <img className="w-[300px] h-[250px] rounded-xl"  src={spot.image} alt="Movie"/></figure>
                             <div className="card-body flex-1">
