@@ -8,6 +8,7 @@ const Update = () => {
     const {user} =useContext(AuthProvider)
 
     const loadedSpot = useLoaderData()
+    // console.log(loadedSpot)
 
     const{_id,spotName,country_name,image,location,average_cost,seasonality, travel_time,total_visitors_per_year,short_description} =loadedSpot;
 
@@ -32,7 +33,7 @@ const Update = () => {
 
         console.log(updateTouristSpot)
 
-        fetch(`http://localhost:5000/updateSpots/${_id}`,{
+        fetch(`https://travel-server-six.vercel.app/updateSpots/${_id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'

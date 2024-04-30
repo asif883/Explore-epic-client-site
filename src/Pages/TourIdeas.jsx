@@ -19,7 +19,7 @@ const TourIdeas = () => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-2xl">WILDSCAPE</h2>
                     <p>
-                        Amidst towering trees,spotted wildlife, and found solace in the forest's timeless embrace.
+                        Amidst towering trees,spotted wildlife, and found solace in the forest timeless embrace.
                     </p>
                     <div className="card-actions">
                     <button className="border-2  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">Explore</button>
@@ -49,7 +49,7 @@ const TourIdeas = () => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-2xl">KAYAKING</h2>
-                    <p>Gliding on serene waters,paddles slicing through the silence, and embraced nature's rhythm.</p>
+                    <p>Gliding on serene waters,paddles slicing through the silence, and embraced natural rhythm.</p>
                     <div className="card-actions">
                     <button className="border-2  px-4  rounded-lg py-3 bg-[#FF9933] text-white  font-semibold">Explore</button>
                     </div>

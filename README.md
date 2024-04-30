@@ -1,8 +1,22 @@
-# React + Vite
+# Explore-Epic
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live-link:https://explore-world-f463f.web.app/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Feature:
+1. You can get a proper Travel guide from website.
+2. One can be enrich his/her knowledge about historical places in South-asia.
+3. It's a single page website
+
+
+### Frame-Work thats I use:
+1. Vite+ React
+2. Tailwind 
+3. Daisy
+
+
+### React Packages
+1. React-Tooltip
+2. React-Awesome-Reveal
+
+

@@ -12,7 +12,7 @@ const handleSubmit =event=>{
 
 
 
-   fetch('http://localhost:5000/addCountry',{
+   fetch('https://travel-server-six.vercel.app/addCountry',{
     method: 'POST',
     headers:{
         'content-type': 'application/json'

@@ -52,7 +52,7 @@ const Router = createBrowserRouter([
         {
           path:'details/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/addSpots/${params.id}`)
+          loader:({params})=> fetch(`https://travel-server-six.vercel.app/addSpots/${params.id}`)
         },
         {
           path:'/my-list',
@@ -61,13 +61,13 @@ const Router = createBrowserRouter([
         {
           path:'/updateSpot/:id',
           element:<Update></Update>,
-          loader:({params})=> fetch(`http://localhost:5000/addSpots/${params.id}`)
+          loader:({params})=> fetch(`https://travel-server-six.vercel.app/addSpots/${params.id}`)
 
         }
         ,{
           path: '/all-tourist-spots',
           element:<AllSpots></AllSpots>,
-          loader : () => fetch('http://localhost:5000/addSpots')
+          loader : () => fetch('https://travel-server-six.vercel.app/addSpots')
 
         },
         // ,{
@@ -83,7 +83,7 @@ const Router = createBrowserRouter([
         {
           path: '/all-tourist-spots/details/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/addSpots/${params.id}`)
+          loader:({params})=> fetch(`https://travel-server-six.vercel.app/addSpots/${params.id}`)
         }
       ]
     },

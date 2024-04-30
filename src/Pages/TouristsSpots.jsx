@@ -7,7 +7,7 @@ const TouristsSpots = () => {
     const [tourData , setData] =useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/addSpots')
+        fetch('https://travel-server-six.vercel.app/addSpots')
         .then(res => res.json())
         .then (data=> setData(data))
     },[])

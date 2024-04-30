@@ -14,7 +14,7 @@ const handleSubmit =event=>{
  
     const countryDetails = {image, country_name,tourists_spot_name ,short_description,seasonality,average_cost,location}
     console.log(countryDetails);
-    fetch('http://localhost:5000/addCountryDetails',{
+    fetch('https://travel-server-six.vercel.app/addCountryDetails',{
         method: 'POST',
         headers:{
             'content-type': 'application/json'

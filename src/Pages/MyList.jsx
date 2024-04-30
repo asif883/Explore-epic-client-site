@@ -11,7 +11,7 @@ const MyList = () => {
     const {user} =useContext(AuthProvider)
     
      useEffect (()=>{
-            fetch(`http://localhost:5000/myList/${user?.email}`)
+            fetch(`https://travel-server-six.vercel.app/myList/${user?.email}`)
             .then(res=> res.json())
             .then(data => setTourSpot(data))
      },[user])
@@ -31,12 +31,12 @@ const MyList = () => {
           }).then((result) => {
          
             if(result.isConfirmed){
-                fetch(`http://localhost:5000/updateSpots/${_id}`,{
+                fetch(`https://travel-server-six.vercel.app/updateSpots/${_id}`,{
                         method: "DELETE"
                 })
                 .then(res => res.json())
                 .then(data => console.log(data))
-                if(data.deletedCount > 0){
+                if(data.deletedCount == 1 ){
                     Swal.fire({
                         title: "Deleted!",
                         text: "Your file has been deleted.",
