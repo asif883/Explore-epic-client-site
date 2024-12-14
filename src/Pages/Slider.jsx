@@ -37,7 +37,7 @@ const Slider = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper h-[350px] lg:h-[650px] z-10"
+        className="mySwiper h-[350px] lg:h-[650px] rounded-none md:rounded-lg z-10"
       >
         
         <SwiperSlide className='relative'>
