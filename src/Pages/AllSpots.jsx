@@ -19,10 +19,7 @@ const AllSpots = () => {
           <div className="text-center mt-6 mb-10">
           <div className="dropdown">
               <div tabIndex={0} role="button" className="border-2 px-4  rounded-lg py-3 bg-[#FF9933] text-white text-lg font-semibold"><span className="flex gap-3 items-center">Sort <IoIosArrowDown /></span></div>
-              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-[#FF9933] font-semibold rounded-box w-52">
-                <li><a>All</a></li>
-                <li><a>Cost low to high</a></li>
-                <li><a>Cost high to low</a></li>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 text-[#FF9933] font-semibold rounded-box w-52">
               </ul>
           </div>
           </div>

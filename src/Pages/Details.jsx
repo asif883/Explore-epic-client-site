@@ -7,7 +7,7 @@ const Details = () => {
     const loadedData = useLoaderData()
     const{spotName,country_name,image,location,average_cost,seasonality, travel_time,total_visitors_per_year,short_description} = loadedData;
     return (
-        <div className="flex gap-6 mt-10">
+        <div className="flex flex-col md:flex-row gap-6 mt-10">
             <div className="flex-1">
                 <img className="rounded-xl" src={image} alt="" />
             </div>
