@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthProvider } from "../Provide/Provider";
+import Loader from "../Components/Loader";
 
 
 const PrivateRoute = ({children}) => {
@@ -12,14 +13,14 @@ const PrivateRoute = ({children}) => {
     // console.log(location.pathname)
 
     if(loading){
-        return <span className="loading loading-dots loading-lg mt-10"></span>
+        return <Loader/>
     }
 
     if(user){
         return children;
     }
     
-    return <Navigate state={location.pathname} to='/login'> </Navigate>;
+    return <Navigate state={location?.pathname} to='/login'> </Navigate>;
 }
 
 PrivateRoute.propTypes={
